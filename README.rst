@@ -31,7 +31,6 @@ However, :code:`DotMap` is a :code:`dict` and you can treat it like a :code:`dic
 	print m.name
 	# Joe Smith Jr
 
-It also has fast, automatic hierarchy (which can be deactivated by initializing with :code:`DotMap(_dynamic=False)`)
 
 .. code-block:: python
 
@@ -78,30 +77,5 @@ And it has iteration that is ordered by insertion
 	# mary DotMap(age=24, job='designer')
 	# dave DotMap(age=55, job='manager')	
 
-There is also built-in :code:`pprint` as :code:`dict` or :code:`json` for debugging a large :code:`DotMap`
-
-.. code-block:: python
-
-	m.pprint()
-	# {'people': {'dave': {'age': 55, 'job': 'manager'},
-	#             'john': {'age': 32, 'job': 'programmer'},
-	#             'mary': {'age': 24, 'job': 'designer'}}}
-	m.pprint(pformat='json')
-	# {
-    	#     "people": {
-        #         "dave": {
-        #	      "age": 55,
-        #	      "job": "manager"
-        # 	  },
-        # 	  "john": {
-        #	      "age": 32,
-        #	      "job": "programmer"
-        # 	  },
-        # 	  "mary": {
-        #	      "age": 24,
-        #	      "job": "designer"
-        # 	  }
-    	#     }
-	# }
 
 And many other features involving dots and dictionaries that will be immediately intuitive when used.
